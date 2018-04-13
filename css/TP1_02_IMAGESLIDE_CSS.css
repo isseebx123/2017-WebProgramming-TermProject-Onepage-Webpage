@@ -1,0 +1,88 @@
+@CHARSET "UTF-8";
+
+div.ImageSlide {
+	background-color : transparent;
+	outline : none;
+	width : 100%;
+	height : 100%;
+}
+
+div.ImageSlide button{
+	position: absolute;
+	width: 3.5%;
+	top: 0; bottom: 0; margin: auto 0; /* 수직 가운데 정렬 */
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+div.ImageSlide button img{
+	border-radius: 100%; /* 모서리 둥글게 만들기 */
+	max-width: 100%;
+	height: auto;
+	transition: 0.3s;
+}
+
+div.ImageSlide button img:hover{
+	background-color: #868789;
+}
+
+/* 이미지 슬라이드 버튼 */
+div.ImageSlide #prev_button{
+	margin-left: 1em;
+	left:0;
+}
+div.ImageSlide #next_button{
+	margin-right: 1em;
+	right:0;
+}
+
+/* 이미지 슬라이드 버튼 끝 */
+
+/* 이미지 슬라이드 */
+div.ImageSlide div.album-wrap{
+	padding-top: 40%; /* 반응형웹페이지 만들기 => ul.album */
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.album-wrap ul.album{
+	position: absolute; /* 반응형웹페이지 만들기 */
+	height: 100%;
+	list-style: none; /* li태그의 머리기호 없애기 */
+	padding: 0px;
+	margin: 0 auto;
+	top:0; bottom: 0;
+	left:0; right: 0;
+}
+
+.album-wrap ul.album li{
+	float:left;
+	width: 20%;
+	height: 100%;
+	display: inline-block; /* li태그 줄바꿈 없애기, 자식의 크기 반영 */
+}
+
+.album-wrap ul.album li img{
+	width: 100%; height: 100%; /* 이미지를 li에 꽉 채움 */
+	margin: 0 auto; /* centralize img */
+}
+
+/* 이미지 슬라이드 끝*/
+
+/* 이미지 슬라이드 하단 버튼 */
+.btn-roll{
+	position: absolute;
+	list-style: none; /* li태그의 머리기호 없애기 */
+	left:0; right:0; bottom: 0.5em; /* 이미지의 아래로 정렬 */
+	padding: 0px;
+}
+
+.btn-roll li{
+	display: inline-block; /* li태그 줄바꿈 없애기 */
+}
+/* 이미지 슬라이드 하단 버튼 끝*/

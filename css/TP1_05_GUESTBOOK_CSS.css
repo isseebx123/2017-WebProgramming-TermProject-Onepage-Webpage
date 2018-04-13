@@ -1,0 +1,115 @@
+@CHARSET "UTF-8";
+div.Guestbook {
+	background-color: #e5e4e2;
+	outline: none;
+	width: 90%;
+	margin: 2% auto;
+	color: black;
+}
+
+/* 테이블 시작 */
+div.Guestbook > table {
+	border-collapse: collapse;
+	width:100%; height:100%;
+	font-family: "BMDOHYEON";
+}
+
+div.Guestbook > table > thead > tr {
+	background-color: blue;
+}
+
+/* tbody 시작 */
+div.Guestbook > table > tbody > tr {
+	border: 1px solid #ededed;
+}
+
+div.Guestbook > table th, div.Guestbook > table > tbody > tr > td{
+	border: 1px solid #ededed;
+	border-width: 2px;
+	word-break: break-all;
+	line-height: 140%;
+	padding: 1% 4%;
+}
+
+div.Guestbook td.leftColumn {
+	text-align: center;
+	width: 25%; /* tr크기의 절반 */
+	font-size: 130%;
+	background-color: rgb(141,141,141);
+}
+
+.textEdit, #contentEdit {
+	border: 0;
+	vertical-align: middle;
+	margin: 0.5% 0;
+	width: 98%;
+	background-color: transparent;
+}
+
+#hostSubmit, .replySubmit {
+	margin: 0.5% auto;
+	background-color: black;
+	padding: 1% 1.5%;
+	white-space:nowrap;
+	color: white;
+	font-family: "BMJUA";
+	font-size: 120%;
+}
+
+.replyTd {
+	text-align: left;
+}
+
+.buttonTd {
+	text-align: center;
+}
+
+/* 오픈 그래프 프로토콜 */
+.openGraphProtocol {
+	table-layout: fixed;
+	width: 60%;
+	border-collapse: collapse;
+	margin: 1% 0;
+}
+
+.openGraphProtocol img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.openGraphProtocol img:hover{
+	cursor: pointer;
+}
+
+.imageDataCell {
+	padding: 0;
+	width: 24%;
+}
+
+.stringDataCell{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: left;
+	padding: 0 3%;
+	line-height: 100%;
+}
+
+.openGraphProtocol td{
+	border: 1px solid rgba(0,0,0,.1);
+	background: white;
+}
+
+.ogDescription {
+	color: gray;
+	font-size: 90%;
+}
+
+.ogUrl {
+	color: blue;
+	font-size: 90%;
+}
+.ogUrl:visited {
+	color: blue;
+}

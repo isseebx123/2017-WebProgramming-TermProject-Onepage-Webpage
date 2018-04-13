@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+
+div.Introduce {
+	background-color : transparent;
+	outline : none;
+	width : inherit;
+}
+
+/* 테이블 시작 */
+div.Introduce table {
+	font-family: "BMJUA";
+	width:100%; height:100%;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+div.Introduce table th, div.Introduce table td{
+	border: 1px solid #ededed;
+	border-width: 2px;
+	line-height: 140%;
+}
+
+div.Introduce table tr {
+	border: 1px solid #ededed;
+}
+
+div.Introduce .introuceTitle {
+	font-size: 130%;
+	color: black;
+	text-align: left;
+	padding-left: 13%;
+	/* 반응형 백그라운드 이미지 */
+	background: url('../img/introduce/introduce.jpg') no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: 100%;
+}
+
+.I_leftColumn {
+	font-size: 150%;
+	color: blue;
+	padding: 1% 0;
+	width: 25%;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.I_rightColumn {
+	padding: 0 1%;
+	font-size: 140%;
+}
+
+span.span01 {
+	color: powderblue;
+	text-decoration: underline;
+}
+
+.portal {
+	background-color: green;
+	opacity: 0.5;
+}
+
+.portal ul{
+	font-size: 150%;
+	text-align:center;
+	list-style: none; /* li태그의 머리기호 없애기 */
+}
+
+.portal ul li{
+	display: inline-block; /* li태그 줄바꿈 없애기 */
+	padding: 0 0.5%;
+}
+
+.portal a:link{
+	color: pink;
+}
+
+.portal a:visited{
+	color: yellow;
+}
+
+.portal a:hover{
+	color: gray;
+	text-decoration: none;
+}
+
+.portal a:active{
+	color: black;
+	text-decoration: none;
+}
+
+/* 타임라인 시작 */
+
+/* 타임라인 끝 */

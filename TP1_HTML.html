@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>포항으로 놀러 오세요~</title>
+	<!-- CSS External 정의 -->
+	<link rel="stylesheet" type="text/css" href="./css/TP1_01_MAIN_CSS.css">
+  <link rel="stylesheet" type="text/css" href="./css/TP1_02_IMAGESLIDE_CSS.css">
+  <link rel="stylesheet" type="text/css" href="./css/TP1_03_INTRODUCE_CSS.css">
+  <link rel="stylesheet" type="text/css" href="./css/TP1_04_GALLERY_CSS.css">
+	<link rel="stylesheet" type="text/css" href="./css/TP1_05_GUESTBOOK_CSS.css">
+	<!-- JS External 정의 -->
+	<script type="text/javascript" src="./js/jquery-3.2.0.js"></script>
+	<script type="text/javascript" src="./js/TP1_01_MAIN_JS.js"></script>
+	<script type="text/javascript" src="./js/TP1_02_IMAGESLIDE_JS.js"></script>
+	<script type="text/javascript" src="./js/TP1_04_GALLERY_JS.js"></script>
+	<script type="text/javascript" src="./js/TP1_05_GUESTBOOK_JS.js"></script>
+</head>
+<body>
+	<!-- 레이아웃은 HTML5 엘리먼트를 사용할 것 -->
+	<header>
+		<!-- Header (Menu bar) -->
+		<div class="Bar">
+			<button class="Menu" value="Home">HOME</button>
+			<button class="Menu" value="ImageSlide">IMAGE SLIDE</button>
+			<button class="Menu" value="Introduce">INTRODUCE</button>
+			<button class="Menu" value="Gallery">GALLERY</button>
+			<button class="Menu" value="Guestbook">GUEST BOOK</button>
+			<!-- Hamburger menu (menu-trigger) -->
+			<a class="menu-trigger" href="#">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+			<div id = "dropdown_bar">
+				<ul>
+					<li>HOME</li>
+					<li>IMAGE SLIDE</li>
+					<li>INTRODUCE</li>
+					<li>GALLERY</li>
+					<li>GUEST BOOK</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- 모달창 -->
+	<div class = "modal">
+		<div class = "modal-wrap">
+			<button id = "m_prev_button">
+				<img src = "./img/modal_button/left.PNG"/>
+			</button>
+			<div class = "modal-content">
+				<img id = "modal-img" src="#" alt="modal-image"/>
+			</div>
+			<button id = "m_next_button">
+				<img src = "./img/modal_button/right.PNG"/>
+			</button>
+		</div>
+	</div>
+	<!-- 메인시작 -->
+	<main>
+		<!-- 이미지슬라이드 시작 -->
+		<div class="ImageSlide">
+			<div class="album-wrap">
+				<ul class="album">
+					<li><img src="./img/image_slide/img01.png"></li>
+					<li><img src="./img/image_slide/img02.png"></li>
+					<li><img src="./img/image_slide/img03.png"></li>
+					<li><img src="./img/image_slide/img04.png"></li>
+					<li><img src="./img/image_slide/img05.png"></li>
+				</ul>
+				<button id="prev_button">
+					<img src="./img/slide_button/left.gif"/>
+				</button>
+				<button id="next_button">
+					<img src="./img/slide_button/right.gif"/>
+				</button>
+				<ul class="btn-roll" list-style-type="none">
+					<li><a href="#"><img src="./img/roll_button/btn_circle_.png" alt="btn_roll"/></a></li>
+					<li><a href="#"><img src="./img/roll_button/btn_circle.png" alt="btn_roll"/></a></li>
+					<li><a href="#"><img src="./img/roll_button/btn_circle.png" alt="btn_roll"/></a></li>
+					<li><a href="#"><img src="./img/roll_button/btn_circle.png" alt="btn_roll"/></a></li>
+					<li><a href="#"><img src="./img/roll_button/btn_circle.png" alt="btn_roll"/></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 인트로듀스 시작 -->
+		<div class = "Introduce">
+			<table>
+				<thead>
+					<tr>
+						<th class = "introuceTitle"colspan="2"><h1>포항의 테마 여행(축제)</h1></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<!-- timeline.js -->
+						<td id = "timeLine" colspan="2">
+							<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1FAtBUsCEBnRgjZIvnZUdJWSxc0DA0FEBdFPJ1Kbfbcw&font=Default&lang=en&initial_zoom=2&height=800' width='100%' height='800' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+						</td>
+						<tr>
+							<td class = "introuceTitle" colspan="2"><h1>포항의 테마 여행(해안 드라이브)</h1></td>
+						</tr>
+					</tr>
+					<tr>
+						<td class ="I_leftColumn">소봉대<br><img src="img/introduce/drive_left_img01.png" alt="소봉대"></td>
+						<td class ="I_rightColumn"><span class = "span01">이 곳은 작은 봉수대가 있었던 섬으로 복길봉수대의 전초역할을 하였던 곳</span>으로 경치가 아름답고 어종이 풍부하여 전국 각지에서 많은 낚시꾼들이 찾아오며 주 대상어종으로는 노래미, 우럭, 가자미, 학꽁치 등이 있다.</td>
+					</tr>
+					<tr>
+						<td class ="I_leftColumn">이육사 청포도시비<br><img src="img/introduce/drive_left_img02.png" alt="이육사 청포도시비"></td>
+						<td class ="I_rightColumn"><span class = "span01">육사는 이 시를 통해서 풍요하고 평화로운 삶의 소망을 노래했다.</span> 청포도라는 소재의 신선한 감각과 선명한 색채 영상들이 잘 어울려서 작품 전체에 아름다움과 넉넉함을 준다. 특히, 식민지 치하의 억압된 현실은 시인이 꿈꾸는 현실과 대립하면서 이를 이겨내고자 하는 극복 의지가 담겨 있다.
+크기는 가로 3m, 세로 1.2m, 높이 2.5m 크기로 육사를 기리는 비문과 청포도 시가 새겨져 있고, 시비 조형물 디자인은 영남대 홍성문 교수, 비문은 아동문학기 손춘익씨, 글씨는 서예가 정현식씨가 각각 맡았다.</td>
+					</tr>
+					<tr>
+						<td class ="I_leftColumn">까꾸리계 독수리바위<br><img src="img/introduce/drive_left_img03.png" alt="까꾸리계 독수리바위"></td>
+						<td class ="I_rightColumn"><span class = "span01">이 지역은 바람과 파도가 심하면 고기(청어)가 밀려나오는 경우가 허다하여 까꾸리(길고리의 방언)로 끌었다는 뜻에서 지어진 지명으로 까꾸리계라부른다.</span> 독수리바위는 오랜 세월의 풍화작용으로 조각된 바위의 형상이 독수리의 부리를 닮았다하여 주민들에 의해 붙여진 이름이다. 호미곶의 땅끝인 이곳에서 서쪽으로 지는 석양의 노을은 대흥산 너머에서 비추는 낙조로 층층의 산과 시가지, 특히 영일만 포스코 굴뚝을 선명하게 나타내게 하는데 그 화면이 동양화를 연상케하는 절경으로 언론, 방송사 등 많은 사진작가들이 다녀간다.</td>
+					</tr>
+					<tr>
+						<td class ="I_leftColumn">하선대<br><img src="img/introduce/drive_left_img04.png" alt="하선대"></td>
+						<td class ="I_rightColumn"><span class = "span01">동해면 입암리와 마산리 경계지점인 황옥포, 속칭 한미끼에 있는 작은 바위에 선녀가 내려와서 놀았다 하여 하선대라고 한다.</span> 옛날 동해의 용왕이 매년 칠석날 선녀들을 이곳에 초청하여 춤과 노래를 즐기곤 하였는데 용왕은 그 선녀들 중에서 얼굴이 빼어나고 마음씨 착한 한 선녀에게 마음이 끌리어 왕비로 삼고 싶었으나 옥황상제가 허락하지 않았다. 그러나 용왕은 옥황상제의 환심을 사기위해 바다를 고요하게 하고, 태풍을 없애는 등 인간을 위하여 일을 하자 옥황상제가 감복하여 선녀와의 혼인을 허락하게 되었다고하며 용왕과 선녀는 자주 이곳으로 내려와서 행복한 시간을 보냈다고 한다.</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td class="portal" colspan="2">
+              <ul>
+                <li><a href="http://www.naver.com">NAVER</a></li>
+                <li><a href="http://www.daum.net">DAUM</a></li>
+                <li><a href="http://www.google.com">GOOGLE</a></li>
+              </ul>
+            </td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+		<!-- 갤러리 시작 -->
+		<div class = "Gallery">
+      <div>
+        <button class = "x_button"><img src="./img/modal_button/x.png" alt="remove_button"/></button>
+				<div class = "eventBox-wrap">
+	        <img class = "gallery-imgs" src="./img/gallery_img/img01.jpg">
+					<div class = "eventBox">물회</div>
+				</div>
+      </div>
+			<div>
+        <button class = "x_button"><img src="./img/modal_button/x.png" alt="remove_button"/></button>
+				<div class = "eventBox-wrap">
+	        <img class = "gallery-imgs" src="./img/gallery_img/img02.jpg">
+					<div class = "eventBox">과메기</div>
+				</div>
+      </div>
+			<div>
+        <button class = "x_button"><img src="./img/modal_button/x.png" alt="remove_button"/></button>
+				<div class = "eventBox-wrap">
+	        <img class = "gallery-imgs" src="./img/gallery_img/img03.jpg">
+					<div class = "eventBox">붓세빵</div>
+				</div>
+      </div>
+			<div>
+        <button class = "x_button"><img src="./img/modal_button/x.png" alt="remove_button"/></button>
+				<div class = "eventBox-wrap">
+	        <img class = "gallery-imgs" src="./img/gallery_img/img04.jpg">
+					<div class = "eventBox">대게</div>
+				</div>
+      </div>
+			<div>
+        <button class = "x_button"><img src="./img/modal_button/x.png" alt="remove_button"/></button>
+				<div class = "eventBox-wrap">
+	        <img class = "gallery-imgs" src="./img/gallery_img/img05.jpg">
+					<div class = "eventBox">전구에이드</div>
+				</div>
+      </div>
+			<div>
+        <button class = "x_button"><img src="./img/modal_button/x.png" alt="remove_button"/></button>
+				<div class = "eventBox-wrap">
+	        <img class = "gallery-imgs" src="./img/gallery_img/img06.jpg">
+					<div class = "eventBox">대게빵</div>
+				</div>
+      </div>
+			<div>
+        <button class = "x_button"><img src="./img/modal_button/x.png" alt="remove_button"/></button>
+				<div class = "eventBox-wrap">
+	        <img class = "gallery-imgs" src="./img/gallery_img/img07.jpg">
+					<div class = "eventBox">조개구이</div>
+				</div>
+      </div>
+			<div>
+        <button class = "x_button"><img src="./img/modal_button/x.png" alt="remove_button"/></button>
+				<div class = "eventBox-wrap">
+	        <img class = "gallery-imgs" src="./img/gallery_img/img08.jpg">
+					<div class = "eventBox">할매국수</div>
+				</div>
+      </div>
+			<div>
+        <button class = "x_button"><img src="./img/modal_button/x.png" alt="remove_button"/></button>
+				<div class = "eventBox-wrap">
+	        <img class = "gallery-imgs" src="./img/gallery_img/img09.jpg">
+					<div class = "eventBox">찐빵</div>
+				</div>
+      </div>
+		</div>
+		<!-- 게스트북 시작 -->
+		<div class = "Guestbook">
+				<table>
+					<thead>
+						<tr>
+							<th colspan="2"><h1>방 명 록</h1></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr id = "hostEditRow">
+							<td class = "leftColumn">작성자</td>
+							<td><input id="writerEdit" class="textEdit" type="text"></td>
+						</tr>
+						<tr>
+							<td class = "leftColumn">내용</td>
+							<td><textarea id="contentEdit" cols="30" rows="10"></textarea></td>
+						</tr>
+						<tr>
+							<td class = "buttonTd" colspan="2"><input id="hostSubmit" type="button" value="등록하기"></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="2">
+	            </td>
+						</tr>
+					</tfoot>
+				</table>
+		</div>
+	</main>
+	<!-- footer 시작 -->
+	<footer>
+		<p>posted by <span>ChungNam National University</span>, <span>201302450</span>, Sanghyeon Lee, lsseebx38@gmail.com</p>
+	</footer>
+</body>
+</html>

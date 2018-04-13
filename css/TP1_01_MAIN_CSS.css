@@ -1,0 +1,189 @@
+@CHARSET "UTF-8";
+/* 폰트패밀리 설정(외부폰트 사용) */
+@font-face {
+	font-family:"BMJUA";
+	src:url("../font/BMJUA_ttf.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family:"BMHANNA";
+	src:url("../font/BMHANNA_11yrs_ttf.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family:"BMDOHYEON";
+	src:url("../font/BMDOHYEON_ttf.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family:"BMYEONSUNG";
+	src:url("../font/BMYEONSUNG_ttf.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+header{
+	position:fixed; left:0; right:0; top:0; /* 메뉴바를 상단에 고정 */
+	z-index:1; /* 항상 fixed header가 main의 위에 오도록 함 */
+}
+
+body{
+	/* 가장 바깥쪽, body의 양쪽 여백 제거 */
+	font-size: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 3em;
+}
+
+/* Menu bar 시작 */
+div.Bar {
+	z-index = -1;
+	overflow:hidden;
+	background-color: blue;
+  width: 100%;
+	text-align:center; /* 메뉴 버튼을 중앙으로 정렬 */
+}
+
+div.Bar button {
+	font-family: "BMHANNA";
+  background-color: inherit;
+  color: white; font-weight: bold; font-size: 130%;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  padding: 14px 16px;
+  margin:0 15px; /* 버튼간의 좌우 margin */
+  cursor: pointer; /* mouseover시 cursor변경 */
+}
+
+div.Bar button:hover, .menu-trigger:hover{
+    background-color: #00D8FF; /* mouseover시 background-color변경 */
+}
+
+#dropdown_bar{
+  position: relative;
+  text-align: left;
+	hidden: ready;
+}
+
+#dropdown_bar ul{
+	font-family: "BMHANNA";
+	line-height: 150%;
+  color: white;
+  text-align: left;
+  position: absolute;
+	right: 1%;
+	width: 15%;
+}
+
+#dropdown_bar ul li:hover{
+  color: red;
+	cursor:pointer;
+}
+
+/* 메뉴바 햄버거버튼 시작 */
+.menu-trigger, .menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+
+.menu-trigger {
+	position: relative;
+	width: 40px;
+	height: 32px;
+  vertical-align: middle;
+	transition: 0.3s;
+	margin-bottom: 4px;
+}
+
+.menu-trigger span {
+	position: absolute;
+	right: 0;
+	width: 100%;
+	height: 4px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+
+/* 햄버거 버튼의 span 위치를 설정 */
+.menu-trigger span:nth-of-type(1) {  top: 0%;  }
+.menu-trigger span:nth-of-type(2) {  top: 50%;  }
+.menu-trigger span:nth-of-type(3) {  top: 100%;  }
+
+/* 햄버거 버튼의 애니메이션 시작 */
+.menu-trigger.active {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+	-webkit-transform: translateY(20px) rotate(-45deg);
+	transform: translateY(15px) rotate(-45deg);
+}
+
+.menu-trigger.active span:nth-of-type(2) {
+	-webkit-transform: translateY(0) rotate(45deg);
+	transform: translateY(0) rotate(45deg);
+}
+
+.menu-trigger.active span:nth-of-type(3) {
+	opacity: 0;
+}
+
+/* 반응형 웹페이지 시작(최대 width기준) */
+@media all and (max-width:875px){
+	div.Bar button{
+		margin: 0;
+		padding: 14px 3px;
+	}
+	#dropdown_bar ul{
+	  right: 50px;
+	}
+}
+
+@media all and (max-width:915px){
+	body{
+		font-size: 70%;
+	}
+}
+
+@media all and (max-width:475px){
+	.Menu{
+		display: none;
+	}
+	.menu-trigger{
+		margin-top: 6px;
+		margin-bottom: 10px;
+	}
+	body{
+		font-size: 50%;
+	}
+}
+/* 메뉴바 끝 */
+
+/* Footer 시작 */
+footer {
+	background-color: blue;
+	color: white;
+	text-align: center;
+	padding: 1% 0;
+	font-family: "BMYEONSUNG";
+	font-size: 130%;
+}
+
+/* 소속, 학번 설정 */
+footer span:nth-of-type(1){
+	color: orange;
+	font-weight: bold;
+	text-decoration: underline;
+}
+footer span:nth-of-type(2){
+	color: pink;
+	font-weight: bold;
+	text-decoration: underline;
+}
+/* Footer 끝 */
